@@ -9,7 +9,7 @@ import (
 )
 
 func recompile(command string, filename string){
-	cmd := exec.Command("pdflatex", filename)
+	cmd := exec.Command(command, filename)
 	err := cmd.Run()
 	if err != nil{ 
 		fmt.Printf("ERROR: ")
