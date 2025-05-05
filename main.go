@@ -38,7 +38,7 @@ func main(){
         info, err = os.Stat(*filename)
         if err != nil{
             fmt.Println(err)
-            return
+            continue
         }
         if info.ModTime() != modtime{
             recompile(*command, *filename)
